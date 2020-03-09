@@ -1,0 +1,15 @@
+# Files Spring Boot will automatically load for configuration:
+# Loaded immediately: bootstrap.properties, bootstrap.yaml
+# Loaded later (and overriding): application.properties, application.yaml
+
+# yaml is a declarative configuration file format
+# yaml stands for: Yet Another Markup Language
+
+server:  port: 8080
+  
+spring:  datasource:    password: ${EM_PASS}
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${EM_ROLE}
+  jpa:
+    hibernate:
+      ddl-auto: update
